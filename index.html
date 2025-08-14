@@ -48,3 +48,87 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Audiobook Library</title>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        padding: 15px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .buttons {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+    }
+    .btn {
+        flex: 1;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .favorites { background-color: #e74c3c; }
+    .playlist { background-color: #f39c12; }
+    .games { background-color: #2ecc71; }
+    .audiolist {
+        padding: 10px;
+    }
+    .audiolist div {
+        padding: 10px;
+        border-bottom: 1px solid #333;
+        display: flex;
+        justify-content: space-between;
+    }
+    audio {
+        width: 100%;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<header>My Audiobooks</header>
+
+<div class="buttons">
+    <div class="btn favorites">Favorites</div>
+    <div class="btn playlist">Playlist</div>
+    <div class="btn games">Game</div>
+</div>
+
+<div class="audiolist">
+    <div>
+        <span>📖 The Great Gatsby</span>
+        <button onclick="playAudio('gatsby.mp3')">▶</button>
+    </div>
+    <div>
+        <span>📖 Sherlock Holmes</span>
+        <button onclick="playAudio('sherlock.mp3')">▶</button>
+    </div>
+</div>
+
+<audio id="player" controls></audio>
+
+<script>
+function playAudio(file) {
+    const player = document.getElementById('player');
+    player.src = file;
+    player.play();
+}
+</script>
+
+</body>
+</html>
