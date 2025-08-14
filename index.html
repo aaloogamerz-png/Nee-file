@@ -132,3 +132,101 @@ function playAudio(file) {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioBookTube</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+
+        header {
+            background-color: #202020;
+            color: white;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 10px;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        audio {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>📚 AudioBookTube</header>
+
+<div class="container">
+    <!-- Book 1 -->
+    <div class="card">
+        <img class="thumbnail" src="book1-thumbnail.jpg" alt="Book 1">
+        <div class="info">
+            <div class="title">The Great Adventure</div>
+            <audio controls>
+                <source src="book1-audio.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="card">
+        <img class="thumbnail" src="book2-thumbnail.jpg" alt="Book 2">
+        <div class="info">
+            <div class="title">Mystery of the Night</div>
+            <audio controls>
+                <source src="book2-audio.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- Add more books here by copying the same card div -->
+</div>
+
+</body>
+</html>nhi hai
